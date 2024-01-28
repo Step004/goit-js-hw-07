@@ -9,6 +9,9 @@ const createButton = document.querySelector('[data-create]');
 const deleteButton = document.querySelector('[data-destroy]');
 
 function createBoxes(event) {
+  if (boxes.hasChildNodes) {
+    boxes.innerHTML = '';
+  }
   if (event >= 1 && event <= 100) {
     for (let i = 0; i < event; i++) {
       const box = document.createElement('div');
